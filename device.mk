@@ -38,7 +38,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # orangefox spesific things
-$(call inherit-product, $(DEVICE_PATH)/fox_gold.mk)
+$(call inherit-product, $(DEVICE_PATH)/fox_rodin.mk)
 
 # API
 PRODUCT_SHIPPING_API_LEVEL := 34
