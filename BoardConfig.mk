@@ -185,4 +185,4 @@ TW_INCLUDE_FUSE_NTFS := true
 TW_INCLUDE_FUSE_EXFAT := true
 
 # Version
-TW_DEVICE_VERSION := rodin-test
+TW_DEVICE_VERSION := udin-test
