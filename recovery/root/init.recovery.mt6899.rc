@@ -53,3 +53,6 @@ service load-touch-module /sbin/sh /system/bin/load-touch-module.sh
     oneshot
     disabled
     seclabel u:r:recovery:s0
+	
+on boot
+    start load-touch-module
