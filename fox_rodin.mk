@@ -19,7 +19,7 @@
 #
 
 # maintainer
-OF_MAINTAINER := nazephyrus
+OF_MAINTAINER := Nazephyrus
 
 # screen settings
 OF_SCREEN_H := 2712

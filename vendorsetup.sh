@@ -35,6 +35,11 @@ export FOX_DELETE_INITD_ADDON=1
 export FOX_REMOVE_BASH=1
 export FOX_REMOVE_AAPT=1
 export FOX_VARIANT="A15"
+export FOX_BUILD_TYPE="beta"
+
+# my avatar
+	export OF_MAINTAINER_AVATAR="$(gettop)/device/xiaomi/rodin/maintainer_avatar.png"
+	cp "${OF_MAINTAINER_AVATAR}" "$(gettop)/bootable/recovery/gui/theme/portrait_hdpi/images/Default/About/maintainer.png"
 
 # Important build settings
 export ALLOW_MISSING_DEPENDENCIES=true
