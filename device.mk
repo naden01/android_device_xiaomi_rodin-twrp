@@ -110,14 +110,23 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # Dynamic
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Bootctrl
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-mtkimpl \
+    android.hardware.boot@1.2-mtkimpl.recovery
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctrl
+
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service
+
 # mtk plpath utils
 PRODUCT_PACKAGES += \
     mtk_plpath_utils \
     mtk_plpath_utils.recovery
-
-# Copy fstab
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/fstab.mt6899:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6899
 
 # Otacert
 PRODUCT_EXTRA_RECOVERY_KEYS += \
