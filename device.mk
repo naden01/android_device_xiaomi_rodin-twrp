@@ -110,6 +110,19 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # Dynamic
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Bootctrl
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-mtkimpl \
+    android.hardware.boot@1.2-mtkimpl.recovery
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctrl
+
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service
+
 # mtk plpath utils
 PRODUCT_PACKAGES += \
     mtk_plpath_utils \
