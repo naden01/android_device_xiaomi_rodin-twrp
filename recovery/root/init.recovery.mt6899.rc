@@ -1,5 +1,3 @@
-import /init.hals.rc
-
 # Set SELinux to Permissive
 on early-init
     write /sys/fs/selinux/enforce 0
@@ -10,6 +8,7 @@ on init
     setprop sys.usb.controller "11201000.usb0"
 
 on post-fs
+    start boot-hal-1-2
 
     # Support A/B feature for EMMC and UFS boot region
     wait /dev/block/mmcblk0boot0 2
@@ -55,4 +54,5 @@ service load-touch-module /sbin/sh /system/bin/load-touch-module.sh
     seclabel u:r:recovery:s0
 	
 on boot
+    start boot-hal-1-2
     start load-touch-module
