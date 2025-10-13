@@ -2,8 +2,6 @@
 set +e
 mod_dir="/lib/modules"
 modules=(
-  xiaomi_touch_rodin.ko
-  scp.ko
   focaltech_touch_rodin.ko
 )
 

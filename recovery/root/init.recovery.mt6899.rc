@@ -55,4 +55,4 @@ service load-touch-module /sbin/sh /system/bin/load-touch-module.sh
 	
 on boot
     start health-hal-2-1
-#    start load-touch-module
+    start load-touch-module
