@@ -2,6 +2,7 @@ set +e
 mod_dir="/vendor_dlkm/lib/modules"
 modules=(
   xiaomi_touch_rodin.ko
+  goodix_core_rodin
   scp.ko
   focaltech_touch_rodin.ko
 )
