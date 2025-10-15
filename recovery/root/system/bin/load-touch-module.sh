@@ -4,7 +4,6 @@ modules=(
   focaltech_touch_rodin.ko
   xiaomi_touch_rodin.ko
   goodix_core_rodin
-  scp.ko
 )
 
 mount /vendor_dlkm
