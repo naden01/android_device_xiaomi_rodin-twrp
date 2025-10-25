@@ -241,3 +241,6 @@
 /lib/modules/uload_ind.ko: /lib/modules/load_track.ko
 /lib/modules/mtk-mmdvfs-ftrace.ko:
 /lib/modules/mtk_mdpm.ko:
+/lib/modules/focaltech_touch_rodin.ko: /lib/modules/scp.ko /lib/modules/xiaomi_touch_rodin.ko /lib/modules/mtk_tinysys_ipi.ko /lib/modules/mtk_rpmsg_mbox.ko /lib/modules/mtk-mbox.ko
+/lib/modules/xiaomi_touch_rodin.ko:
+/lib/modules/goodix_core_rodin.ko: /lib/modules/scp.ko /lib/modules/xiaomi_touch_rodin.ko /lib/modules/mtk_tinysys_ipi.ko /lib/modules/mtk_rpmsg_mbox.ko /lib/modules/mtk-mbox.ko
