@@ -1767,13 +1767,3 @@ alias of:N*T*Cmediatek,mt6897-mdpm mtk_mdpm
 alias of:N*T*Cmediatek,mt6897-mdpmC* mtk_mdpm
 alias of:N*T*Cmediatek,mt6989-mdpm mtk_mdpm
 alias of:N*T*Cmediatek,mt6989-mdpmC* mtk_mdpm
-alias of:N*T*Cxiaomi,touch-spi focaltech_touch_rodin
-alias of:N*T*Cxiaomi,touch-spiC* focaltech_touch_rodin
-alias of:N*T*Cgoodix,gt9897 goodix_core_rodin
-alias of:N*T*Cgoodix,gt9897C* goodix_core_rodin
-alias of:N*T*Cgoodix,gt9966 goodix_core_rodin
-alias of:N*T*Cgoodix,gt9966C* goodix_core_rodin
-alias of:N*T*Cgoodix,gt9916 goodix_core_rodin
-alias of:N*T*Cgoodix,gt9916C* goodix_core_rodin
-alias i2c:gtx8_i2c goodix_core_rodin
-alias platform:goodix_ts goodix_core_rodin
