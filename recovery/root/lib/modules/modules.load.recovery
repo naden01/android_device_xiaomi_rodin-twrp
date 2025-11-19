@@ -237,4 +237,3 @@ perf_helper.ko
 debug_ext.ko
 kshrink_slabd.ko
 xiaomi_wifi_gpio.ko
-xiaomi_touch_rodin.ko
