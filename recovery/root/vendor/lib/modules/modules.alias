@@ -1,0 +1,13 @@
+# Aliases extracted from modules themselves.
+alias of:N*T*Cxiaomi,touch-spi focaltech_touch_rodin
+alias of:N*T*Cxiaomi,touch-spiC* focaltech_touch_rodin
+alias of:N*T*Cgoodix,tfa9874 snd_soc_tfa98xx
+alias of:N*T*Cgoodix,tfa9874C* snd_soc_tfa98xx
+alias of:N*T*Cgoodix,gt9897 goodix_core_rodin
+alias of:N*T*Cgoodix,gt9897C* goodix_core_rodin
+alias of:N*T*Cgoodix,gt9966 goodix_core_rodin
+alias of:N*T*Cgoodix,gt9966C* goodix_core_rodin
+alias of:N*T*Cgoodix,gt9916 goodix_core_rodin
+alias of:N*T*Cgoodix,gt9916C* goodix_core_rodin
+alias i2c:gtx8_i2c goodix_core_rodin
+alias platform:goodix_ts goodix_core_rodin
