@@ -1,3 +1,7 @@
-/lib/modules/focaltech_touch_rodin.ko: /lib/modules/scp.ko /lib/modules/xiaomi_touch_rodin.ko /lib/modules/mtk_tinysys_ipi.ko /lib/modules/mtk_rpmsg_mbox.ko /lib/modules/mtk-mbox.ko
-/lib/modules/xiaomi_touch_rodin.ko:
-/lib/modules/goodix_core_rodin.ko: /lib/modules/scp.ko /lib/modules/xiaomi_touch_rodin.ko /lib/modules/mtk_tinysys_ipi.ko /lib/modules/mtk_rpmsg_mbox.ko /lib/modules/mtk-mbox.ko
+focaltech_touch_rodin.ko: scp.ko xiaomi_touch_rodin.ko mtk_tinysys_ipi.ko mtk_rpmsg_mbox.ko mtk-mbox.ko
+xiaomi_touch_rodin.ko:
+goodix_core_rodin.ko: scp.ko xiaomi_touch_rodin.ko mtk_tinysys_ipi.ko mtk_rpmsg_mbox.ko mtk-mbox.ko
+mtk-mbox.ko:
+scp.ko: mtk_tinysys_ipi.ko mtk_rpmsg_mbox.ko mtk-mbox.ko
+mtk_rpmsg_mbox.ko: mtk-mbox.ko
+mtk_tinysys_ipi.ko: mtk_rpmsg_mbox.ko mtk-mbox.ko
