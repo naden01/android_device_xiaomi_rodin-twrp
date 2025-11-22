@@ -3,6 +3,8 @@ alias of:N*T*Cxiaomi,touch-spi focaltech_touch_rodin
 alias of:N*T*Cxiaomi,touch-spiC* focaltech_touch_rodin
 alias of:N*T*Cgoodix,tfa9874 snd_soc_tfa98xx
 alias of:N*T*Cgoodix,tfa9874C* snd_soc_tfa98xx
+alias of:N*T*Cgoodix,tfa9874 snd_soc_tfa98xx
+alias of:N*T*Cgoodix,tfa9874C* snd_soc_tfa98xx
 alias of:N*T*Cgoodix,gt9897 goodix_core_rodin
 alias of:N*T*Cgoodix,gt9897C* goodix_core_rodin
 alias of:N*T*Cgoodix,gt9966 goodix_core_rodin
