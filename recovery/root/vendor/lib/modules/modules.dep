@@ -1,7 +1,0 @@
-focaltech_touch_rodin.ko: scp.ko xiaomi_touch_rodin.ko mtk_tinysys_ipi.ko mtk_rpmsg_mbox.ko mtk-mbox.ko
-mtk_tinysys_ipi.ko: mtk_rpmsg_mbox.ko mtk-mbox.ko
-xiaomi_touch_rodin.ko:
-mtk_rpmsg_mbox.ko: mtk-mbox.ko
-mtk-mbox.ko:
-scp.ko: mtk_tinysys_ipi.ko mtk_rpmsg_mbox.ko mtk-mbox.ko
-goodix_core_rodin.ko: scp.ko xiaomi_touch_rodin.ko mtk_tinysys_ipi.ko mtk_rpmsg_mbox.ko mtk-mbox.ko
