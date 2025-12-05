@@ -68,7 +68,7 @@ TW_LOAD_VENDOR_MODULES := $(shell echo \"$(shell ls $(DEVICE_PATH)/recovery/root
 
 # copy first stage ramdisk
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/first_stage_ramdisk/fstab.mt6899:$(TARGET_COPY_OUT_RAMDISK)/fstab.default
+    $(LOCAL_PATH)/recovery/root/first_stage_ramdisk/fstab.mt6899:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.mt6899
 	
 BOARD_VENDOR_CMDLINE := "bootopt=64S3,32N2,64N2 erofs.reserved_pages=64"
 BOARD_KERNEL_BASE := 0x3fff8000
