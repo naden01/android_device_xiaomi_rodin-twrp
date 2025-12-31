@@ -44,3 +44,7 @@ export FOX_BUILD_TYPE="beta"
 # Important build settings
 export ALLOW_MISSING_DEPENDENCIES=true
 export LC_ALL="C"
+
+# clone gflags
+
+git clone https://android.googlesource.com/platform/external/gflags/ -b android-14.0.0_r75 external/gflags
