@@ -250,11 +250,6 @@
         <transport>hwbinder</transport>
         <fqname>@1.2::IBootControl/default</fqname>
     </hal>
-    <hal format="hidl">
-        <name>android.hardware.health</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.1::IHealth/default</fqname>
-    </hal>
     <sepolicy>
         <version>202404</version>
     </sepolicy>
