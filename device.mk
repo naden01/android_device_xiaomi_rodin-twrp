@@ -89,42 +89,25 @@ AB_OTA_PARTITIONS += \
     vendor_dlkm \
     mi_ext
 
+# Update engine
+PRODUCT_PACKAGES_DEBUG += \
+    update_engine_client
+
 PRODUCT_PACKAGES += \
+    otapreopt_script \
+    cppreopts.sh \
     update_engine \
-    update_engine_sideload \
     update_verifier \
-    checkpoint_gc
+    update_engine_sideload
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
-    POSTINSTALL_PATH_system=system/bin/mtk_plpath_utils \
+    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
     FILESYSTEM_TYPE_system=erofs \
     POSTINSTALL_OPTIONAL_system=true
 
-AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_vendor=true \
-    POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
-    FILESYSTEM_TYPE_vendor=erofs \
-    POSTINSTALL_OPTIONAL_vendor=true
-
 # Dynamic
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
-# Boot control HAL
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-mtkimpl \
-    android.hardware.boot@1.0-impl-1.2-mtkimpl \
-    android.hardware.boot@1.2-mtkimpl.recovery
-
-PRODUCT_PACKAGES_DEBUG += \
-    bootctrl
-
-# Health HAL
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service \
-    android.hardware.health@2.1-impl.recovery \
-    android.hardware.health@2.1-service.rc
 
 # create pl dev
 PRODUCT_PACKAGES += \
