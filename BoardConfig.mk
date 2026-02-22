@@ -148,6 +148,11 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 
+# init_boot ramdisk
+BOARD_VENDOR_RAMDISK_FRAGMENTS := init_boot
+BOARD_VENDOR_RAMDISK_FRAGMENT.init_boot.PREBUILT := $(DEVICE_PATH)/ramdisk.init_boot.lz4
+BOARD_VENDOR_RAMDISK_FRAGMENT.init_boot.MKBOOTIMG_ARGS := --ramdisk_type platform
+
 # Verified Boot
 BOARD_AVB_ENABLE                           := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS           += --flags 3
