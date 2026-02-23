@@ -1,0 +1,20 @@
+# Boot / Kernel
+/boot             emmc     /dev/block/by-name/boot            flags=display="Boot";backup=1;flashimg=1;slotselect
+/vendor_boot      emmc     /dev/block/by-name/vendor_boot     flags=display="Vendor Boot";backup=1;flashimg=1;slotselect
+/dtbo             emmc     /dev/block/by-name/dtbo            flags=display="Dtbo";backup=1;flashimg=1;slotselect
+/vbmeta           emmc     /dev/block/by-name/vbmeta          flags=display="Vbmeta";backup=1;flashimg=1;slotselect
+
+# IMEI / EFS (Critical for Backup)
+/nvram            emmc     /dev/block/by-name/nvram           flags=display="Nvram";backup=1
+/nvdata           ext4     /dev/block/by-name/nvdata          flags=display="Nvdata";backup=1;subpartitionof=/nvram
+/nvcfg            ext4     /dev/block/by-name/nvcfg           flags=display="Nvcfg";backup=1;subpartitionof=/nvram
+/protect_f        ext4     /dev/block/by-name/protect1        flags=display="Protect_F";backup=1
+/protect_s        ext4     /dev/block/by-name/protect2        flags=display="Protect_S";backup=1
+/persist          ext4     /dev/block/by-name/persist         flags=display="Persist";backup=1
+
+# Misc
+/logo             emmc     /dev/block/by-name/logo            flags=display="Logo";backup=1;flashimg=1
+
+# Removable Storage
+/external_sd      auto     /dev/block/mmcblk1p1 /dev/block/mmcblk1   flags=display="MicroSD";storage;wipeingui;removable
+/usb_otg          auto     /dev/block/sda1      /dev/block/sda       flags=display="USB OTG";storage;wipeingui;removable
