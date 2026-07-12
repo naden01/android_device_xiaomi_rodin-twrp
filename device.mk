@@ -5,7 +5,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
+#      http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -40,9 +40,23 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 # orangefox spesific things
 $(call inherit-product, $(DEVICE_PATH)/fox_rodin.mk)
 
-# API
-PRODUCT_SHIPPING_API_LEVEL := 34
-PRODUCT_TARGET_VNDK_VERSION := 34
+# Dynamic API Compatibility (Działa od Androida 14 aż do 17)
+ifndef PRODUCT_SHIPPING_API_LEVEL
+    PRODUCT_SHIPPING_API_LEVEL := 34
+endif
+
+# VNDK zostało porzucone w nowszych wersjach Androida.
+# Zapobiegamy błędowi kompilacji na nowszych manifestach.
+ifndef PRODUCT_TARGET_VNDK_VERSION
+    PRODUCT_TARGET_VNDK_VERSION := current
+endif
+ifndef BOARD_VNDK_VERSION
+    BOARD_VNDK_VERSION := current
+endif
+
+# Zapewnienie kompatybilności z EROFS stosowanym domyślnie w nowym Androidzie
+BOARD_SUPPORTS_EROFS := true
+TARGET_USERIMAGES_USE_EROFS := true
 
 # Enable Fuse Passthrough
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.fuse.passthrough.enable=true
@@ -134,4 +148,3 @@ PRODUCT_PACKAGES += \
 # Otacert
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     $(DEVICE_PATH)/security/releasekey
-
